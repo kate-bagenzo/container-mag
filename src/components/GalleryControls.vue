@@ -1,17 +1,12 @@
 <script setup lang="ts">
-
-interface Props {
-    galleryPosition: number;
-}
-
-const props = defineProps<Props>();
+import { galleryState } from '@/galleryState';
 
 </script>
 
 <template>
     <ol id="controls">
         <li>
-            <button :disabled="galleryPosition == 0"  @click="$emit ('galleryBack')">&lt;</button>
+            <button :disabled="galleryState.position == 0"  @click="$emit ('galleryBack')">&lt;</button>
         </li>
         <li>
             <button @click="$emit ('galleryForward')">&gt;</button>

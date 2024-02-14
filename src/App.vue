@@ -5,16 +5,6 @@ import GalleryControlsVue from './components/GalleryControls.vue';
 import GalleryInfosVue from './components/GalleryInfos.vue';
 import GalleryCaptionVue from './components/GalleryCaption.vue';
 
-const galleryPosition = ref(0);
-
-const galleryBack = () => {
-  galleryPosition.value -= 1;
-}
-
-const galleryForward = () => {
-  galleryPosition.value += 1;
-}
-
 </script>
 
 <template>
@@ -22,7 +12,7 @@ const galleryForward = () => {
     <RouterView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
-    <GalleryControlsVue :galleryPosition="galleryPosition" @galleryBack="galleryBack" @galleryForward="galleryForward"/>
+    <GalleryControlsVue />
   </main>
 </template>
 

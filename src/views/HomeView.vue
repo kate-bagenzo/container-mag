@@ -20,5 +20,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    outline: 1rem solid $core-coral;
+    outline-offset: -2rem;
   }
 </style>
