@@ -2,12 +2,12 @@
 </script>
 
 <template>
-    <ol>
+    <ol id="controls">
         <li>
-            <button>&lt;</button>
+            <button @click="$emit ('galleryBack')">&lt;</button>
         </li>
         <li>
-            <button>&gt;</button>
+            <button @click="$emit ('galleryForward')">&gt;</button>
         </li>
     </ol>
 </template>
@@ -16,11 +16,14 @@
     ol {
         list-style-type: none;
         display: flex;
+        margin: 0;
+        padding: 0;
+        border: 1px solid black;
 
         button {
             all: unset;
             color: $core-coral;
-
+            font-size: 5rem;
             &:hover {
                 cursor: pointer;
             }
