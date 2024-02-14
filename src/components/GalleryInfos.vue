@@ -10,6 +10,6 @@
 
 <style scoped lang="scss">
     section {
-        border: 1px solid black;
+        border: 2px dashed $core-coral;
     }
 </style>

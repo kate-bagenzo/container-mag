@@ -22,21 +22,28 @@ const galleryForward = () => {
     <RouterView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
-    <GalleryControlsVue @galleryBack="galleryBack" @galleryForward="galleryForward"/>
+    <GalleryControlsVue :galleryPosition="galleryPosition" @galleryBack="galleryBack" @galleryForward="galleryForward"/>
   </main>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   main {
     display: grid;
     width: 100%;
     height: 100%;
+    padding: 1rem;
+
     grid-template-areas: 
     "art caption"
     "info controls";
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 2fr 1fr;
-    
+    gap: 1rem;
+
+    background-color: $core-navy;
+    color: $core-grey;
+    font-family: 'Inter', 'sans-serif';
+  
   }
 
   #art {

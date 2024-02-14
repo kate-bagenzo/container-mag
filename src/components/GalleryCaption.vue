@@ -12,6 +12,6 @@
 
 <style scoped lang="scss">
     section {
-        border: 1px solid black;
+        border: 2px solid $core-coral;
     }
 </style>
