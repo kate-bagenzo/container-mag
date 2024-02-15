@@ -26,18 +26,21 @@ import { galleryState } from '@/galleryState';
         border: 2px solid white;
 
 
-
         button {
             all: unset;
             color: $core-coral;
-            font-size: 5rem;
+            font-size: 3rem;
             background-color: $core-navy;
             width: 100%;
-            height: 100%;
+            height: 30%;
             display: flex;
             align-items: center;
             justify-content: center;
             user-select: none;
+            
+            border-bottom: 2px solid white;
+            
+
             &:hover {
                 cursor: pointer;
                 color: $core-grey;
@@ -59,7 +62,13 @@ import { galleryState } from '@/galleryState';
             width: 100%;
             height: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
         }
+    li:nth-child(1) button {
+        border-right: 1px solid white;
+    }
+    li:nth-child(2) button {
+        border-left: 1px solid white;
+    }
 </style>
