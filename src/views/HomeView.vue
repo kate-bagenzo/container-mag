@@ -5,7 +5,8 @@
 <template>
   <section id="art">
     <h1><em>CONTAINER</em> presents:</h1>
-    <h2>[computing in 2024] gallerie / collection</h2>
+    <h2>[computing in 2024]</h2>
+    <h3>gallerie / collection</h3>
   </section>
 </template>
 

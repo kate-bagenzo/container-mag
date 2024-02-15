@@ -2,3 +2,18 @@
   font-family: 'Inter';
   src: url('fonts/Inter-Regular.ttf');
 }
+
+@keyframes growLight1 {
+  from {width: 0%;}
+  to {width: 80%;}
+}
+
+@keyframes growLight2 {
+  from {width: 0%;}
+  to {width: 60%;}
+}
+
+@keyframes growLight3 {
+  from {width: 0%;}
+  to {width: 40%;}
+}

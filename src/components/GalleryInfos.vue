@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { galleryState } from '@/galleryState';
 
 const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
 

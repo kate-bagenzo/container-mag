@@ -26,7 +26,7 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
     grid-template-areas: 
     "art caption"
     "info controls";
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 0.5fr;
     grid-template-rows: 2fr 1fr;
     gap: 1rem;
 
