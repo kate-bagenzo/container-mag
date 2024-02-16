@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { ref } from 'vue';
+import { galleryState } from './galleryState';
 import GalleryControlsVue from './components/GalleryControls.vue';
 import GalleryInfosVue from './components/GalleryInfos.vue';
 import GalleryCaptionVue from './components/GalleryCaption.vue';
@@ -8,7 +8,7 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
 </script>
 
 <template>
-  <main>
+  <main :class="{flowers: galleryState.position == 1}">
     <RouterView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
@@ -33,10 +33,15 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
     background-color: $core-navy;
     color: $core-grey;
     font-family: 'Inter', 'sans-serif';
-  
+    transition: background-color 5s;
   }
 
-  #art {
+  .flowers {
+    background-color: $core-grey;
+    transition: background-color 5s;
+  }
+
+  .artview {
     grid-area: art;
   }
 
