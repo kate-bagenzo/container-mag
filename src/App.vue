@@ -33,12 +33,12 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
     background-color: $core-navy;
     color: $core-grey;
     font-family: 'Inter', 'sans-serif';
-    transition: background-color 5s;
+    transition: background-color 2s;
   }
 
   .flowers {
     background-color: $core-grey;
-    transition: background-color 5s;
+    transition: background-color 2s;
   }
 
   .artview {

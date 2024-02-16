@@ -4,12 +4,18 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <ol id="controls">
+    <ol id="controls" :class="{flowers:galleryState.position == 1}">
         <li>
-            <button :class="{second: galleryState.position}" :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">&lt;</button>
+            <button :class="{second: galleryState.position, intro:galleryState.position == 0, flowers:galleryState.position == 1}"
+            :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
+            &lt;
+            </button>
         </li>
         <li>
-            <button :class="{second: galleryState.position}" @click="galleryState.galleryForward">&gt;</button>
+            <button :class="{second: galleryState.position, intro:galleryState.position == 0, flowers:galleryState.position == 1}"
+            @click="galleryState.galleryForward">
+            &gt;
+            </button>
         </li>
     </ol>
 </template>
@@ -71,10 +77,21 @@ import { galleryState } from '@/galleryState';
             align-items: flex-start;
             justify-content: center;
         }
-    li:nth-child(1) button {
+        
+    li:nth-child(1) .intro {
         border-right: 1px solid white;
     }
-    li:nth-child(2) button {
+    li:nth-child(2) .intro {
         border-left: 1px solid white;
     }
+
+    .flowers {
+            background-color: $flower-gray;
+            color: $flower-blue;
+            border-color: $flower-green;
+            &:hover {
+                color: $flower-green;
+                background-color: $flower-blue;
+            }
+        }
 </style>
