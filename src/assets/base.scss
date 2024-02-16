@@ -17,3 +17,8 @@
   from {width: 0%;}
   to {width: 40%;}
 }
+
+@keyframes fadeOut {
+  from {opacity: 100%;}
+  to {opacity: 0%;}
+}

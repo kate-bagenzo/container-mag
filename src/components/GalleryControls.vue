@@ -6,10 +6,10 @@ import { galleryState } from '@/galleryState';
 <template>
     <ol id="controls">
         <li>
-            <button :disabled="galleryState.position == 0"  @click="$emit ('galleryBack')">&lt;</button>
+            <button :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">&lt;</button>
         </li>
         <li>
-            <button @click="$emit ('galleryForward')">&gt;</button>
+            <button @click="galleryState.galleryForward">&gt;</button>
         </li>
     </ol>
 </template>
@@ -17,6 +17,7 @@ import { galleryState } from '@/galleryState';
 <style scoped lang="scss">
     ol {
         list-style-type: none;
+        
         display: flex;
         align-items: center;
         justify-content: center;
