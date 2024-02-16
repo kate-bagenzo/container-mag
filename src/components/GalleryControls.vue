@@ -6,10 +6,10 @@ import { galleryState } from '@/galleryState';
 <template>
     <ol id="controls">
         <li>
-            <button :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">&lt;</button>
+            <button :class="{second: galleryState.position}" :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">&lt;</button>
         </li>
         <li>
-            <button @click="galleryState.galleryForward">&gt;</button>
+            <button :class="{second: galleryState.position}" @click="galleryState.galleryForward">&gt;</button>
         </li>
     </ol>
 </template>
@@ -38,6 +38,7 @@ import { galleryState } from '@/galleryState';
             align-items: center;
             justify-content: center;
             user-select: none;
+            transition: height 2s;
             
             border-bottom: 2px solid white;
             
@@ -56,6 +57,10 @@ import { galleryState } from '@/galleryState';
                     background-color: $core-navy;
                 }
             }
+        }
+        .second {
+            height: 100%;
+            transition: height 2s;
         }
     }
 
