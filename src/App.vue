@@ -8,7 +8,7 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
 </script>
 
 <template>
-  <main :class="{flowers: galleryState.position == 1}">
+  <main :class="{mainFlowers: galleryState.position == 1}">
     <RouterView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
@@ -36,7 +36,7 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
     transition: background-color 2s;
   }
 
-  .flowers {
+  .mainFlowers {
     background-color: $core-grey;
     transition: background-color 2s;
   }

@@ -6,15 +6,17 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
 </script>
 
 <template>
-    <section id="info">
-        <Transition mode="out-in">
-            <span class="keyboard" v-if="galleryState.position == 0" >
+    <Transition mode="out-in">
+        <section v-if="galleryState.position == 0" id="info">
+            <span class="keyboard" >
                 <span class="keys" v-for="key in keyboard">{{  key }}</span>
             </span>
-            <p v-else-if="galleryState.position == 1">this is the first piece... gardens time</p>
-        </Transition>
-        
-    </section>
+        </section>
+
+        <section v-else-if="galleryState.position == 1" id="info" class="flowers">
+            <p>computer as a garden</p>
+        </section>
+    </Transition>
 </template>
 
 <style scoped lang="scss">
@@ -39,6 +41,7 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         gap: 0.5rem;
         padding: 2rem;
 
+
         .keyboard {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
@@ -54,6 +57,14 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+    .flowers {
+        border: 2px solid $flower-green;
+        background-color: $flower-gray;
+        display: block;
+        p {
+            color: $flower-blue;
         }
     }
 </style>
