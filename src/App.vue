@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import { galleryState } from './galleryState';
 import GalleryControlsVue from './components/GalleryControls.vue';
 import GalleryInfosVue from './components/GalleryInfos.vue';
 import GalleryCaptionVue from './components/GalleryCaption.vue';
+import GalleryMainView from './components/GalleryMainView.vue';
 
 </script>
 
 <template>
   <main :class="{mainFlowers: galleryState.position == 1}">
-    <RouterView />
+   <GalleryMainView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
     <GalleryControlsVue />
