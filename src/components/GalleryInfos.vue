@@ -6,17 +6,14 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
 </script>
 
 <template>
-    <Transition mode="out-in">
-        <section v-if="galleryState.position == 0" id="info">
-            <span class="keyboard" >
-                <span class="keys" v-for="key in keyboard">{{  key }}</span>
-            </span>
+        <section id="info" :class="{flowers: galleryState.position}">
+            <Transition mode="out-in">
+                <span v-if="galleryState.position == 0" class="keyboard" >
+                    <span class="keys" v-for="key in keyboard">{{  key }}</span>
+                </span>
+                <p v-else-if="galleryState.position == 1">flowers flowers flowers</p>
+            </Transition>
         </section>
-
-        <section v-else-if="galleryState.position == 1" id="info" class="flowers">
-            <p>computer as a garden</p>
-        </section>
-    </Transition>
 </template>
 
 <style scoped lang="scss">
@@ -40,6 +37,7 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         overflow: hidden;
         gap: 0.5rem;
         padding: 2rem;
+        transition: all 2s ease-out;
 
 
         .keyboard {
@@ -62,7 +60,6 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
     .flowers {
         border: 2px solid $flower-green;
         background-color: $flower-gray;
-        display: block;
         p {
             color: $flower-blue;
         }
