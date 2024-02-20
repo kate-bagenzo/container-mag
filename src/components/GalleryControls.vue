@@ -44,7 +44,7 @@ import { galleryState } from '@/galleryState';
             align-items: center;
             justify-content: center;
             user-select: none;
-            transition: height 2s;
+            transition: height 2s, background-color 1s, color 1s;
             
             border-bottom: 2px solid white;
             
@@ -53,6 +53,7 @@ import { galleryState } from '@/galleryState';
                 cursor: pointer;
                 color: $core-grey;
                 background-color: $core-coral;
+                transition: background-color 1s, color 1s, height 2s;
             }
 
             &:disabled {
