@@ -41,7 +41,7 @@ import GalleryMainView from './components/GalleryMainView.vue';
     transition: background-color 2s;
   }
 
-  .artview {
+  #intro {
     grid-area: art;
   }
 
