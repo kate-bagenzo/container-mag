@@ -4,7 +4,7 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <section id="caption">
+    <section id="caption" :class="{flowers: galleryState.position == 1}">
         <Transition mode="out-in">
             <div v-if="galleryState.position == 0">
                 <div class="light"></div>
@@ -34,6 +34,7 @@ import { galleryState } from '@/galleryState';
         border: 2px solid $core-coral;
         display: flex;
         flex-direction: column;
+        transition: all 2s;
 
         div {
             width: 100%;
@@ -65,5 +66,16 @@ import { galleryState } from '@/galleryState';
         width: 40%;
         animation-name: growLight3;
         animation-duration: 2s;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flowers {
+        border-color: $flower-green;
+        background-color: $flower-gray;
+        color: $flower-green;
     }
 </style>
