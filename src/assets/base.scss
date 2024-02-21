@@ -22,3 +22,8 @@
   from {opacity: 100%;}
   to {opacity: 0%;}
 }
+
+@keyframes slideFromBottom {
+  from {width: 0%;}
+  to {width: 100%;}
+}
