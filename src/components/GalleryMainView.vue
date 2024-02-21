@@ -4,10 +4,15 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <section id="intro">
-      <h1><em>CONTAINER</em> presents:</h1>
-      <h2>[computing in 2024]</h2>
-      <h3>gallerie / collection</h3>
+    <section id="mainview" :class="{intro: galleryState.position == 0, flowers: galleryState.position == 1}">
+      <Transition mode="out-in">
+        <section class="titles" v-if="galleryState.position == 0">
+          <h1><em>CONTAINER</em> presents:</h1>
+          <h2>[computing in 2024]</h2>
+          <h3>gallerie / collection</h3>
+        </section>
+        <section class="img_flowers" v-else-if="galleryState.position == 1"></section>
+      </Transition>
     </section>
 </template>
 
@@ -22,25 +27,35 @@ import { galleryState } from '@/galleryState';
     opacity: 0;
     }
   
-  #intro {
-    border: 2px solid $core-coral;
-    
+  #mainview {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
 
+  .intro {
+    border: 2px solid $core-coral;
     outline: 1rem solid $core-coral;
     outline-offset: -2rem;
+    transition: all 2s;
   }
 
-  #flowers {
-    border: 2px solid $core-navy;
+
+  .flowers {
+    border: 2px solid $flower-green;
+    outline-offset: 0rem;
+    outline: 1rem solid transparent;
+    transition: all 2s;
   }
 
-  img {
-    object-fit: cover;
+
+  .img_flowers {
     width: 100%;
-    max-height: 100%;
+    height: 100%;
+    background-image: url('../assets/img/flowers.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 </style>
