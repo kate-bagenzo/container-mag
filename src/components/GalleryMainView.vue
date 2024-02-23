@@ -41,6 +41,13 @@ import { galleryState } from '@/galleryState';
     transition: all 2s;
   }
 
+  .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 
   .flowers {
     border: 2px solid $flower-green;
