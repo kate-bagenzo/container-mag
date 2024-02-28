@@ -23,7 +23,12 @@
   to {opacity: 0%;}
 }
 
-@keyframes slideFromBottom {
+@keyframes slideFromWidth {
   from {width: 0%;}
   to {width: 100%;}
+}
+
+@keyframes slideFromHeight {
+  from {height: 0%;}
+  to {height: 100%;}
 }

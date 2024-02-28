@@ -9,7 +9,6 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         <section id="info" :class="{flowers: galleryState.position}">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" >
-                    <span class="keys" v-for="key in keyboard">{{  key }}</span>
                 </span>
                 <p v-else-if="galleryState.position == 1">flowers flowers flowers</p>
             </Transition>
@@ -36,17 +35,15 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         justify-content: center;
         overflow: hidden;
         gap: 0.5rem;
-        padding: 2rem;
-        animation-name: slideFromBottom;
+        animation-name: slideFromHeight;
         animation-duration: 1s;
         transition: all 2s ease-out;
 
 
         .keyboard {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 0.5rem;
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/img/keyboard.png');
         }
         
         .keys {
@@ -60,7 +57,7 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         }
     }
     .flowers {
-        border: 2px solid $flower-green;
+        border: 2px dashed $flower-green;
         background-color: $flower-gray;
         p {
             color: $flower-blue;
