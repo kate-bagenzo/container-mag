@@ -86,6 +86,14 @@ import { galleryState } from '@/galleryState';
         border-left: 1px solid white;
     }
 
+    @media screen and (orientation: portrait) {
+        ol {
+            button {
+                height: 100%;
+            }
+        }
+    }
+
     .flowers {
             background-color: $flower-gray;
             color: $flower-blue;

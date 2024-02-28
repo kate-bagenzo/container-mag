@@ -58,10 +58,14 @@ import GalleryMainView from './components/GalleryMainView.vue';
   }
 
   @media screen and (orientation: portrait) {
+    #caption {
+      display: none;
+    }
+    
     main {
       grid-template-areas: 
       "art art"
-      "caption info"
+      "info info"
       "controls controls";
 
       grid-template-columns: 1fr 1fr;
