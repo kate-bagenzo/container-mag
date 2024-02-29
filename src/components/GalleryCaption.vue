@@ -12,8 +12,12 @@ import { galleryState } from '@/galleryState';
                 <div class="light"></div>
             </div>
             <aside v-else-if="galleryState.position == 1">
-                <p>Flowers, 2024</p>
-                <p>Oil on canvas</p>
+                <svg view-box="0 0 100 100">
+                    <text
+                    x="0" y="0"
+                    class="flowers">flowers
+                    </text>
+                </svg>
             </aside>
         </Transition>
     </section>
@@ -71,11 +75,25 @@ import { galleryState } from '@/galleryState';
     aside {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    svg text {
+        transform: rotate(90deg);
+        font-family: 'Inter';
+        font-size: calc(5vw + 5vh);
     }
 
     .flowers {
         border-color: $flower-green;
         background-color: $flower-gray;
-        color: $flower-green;
+        color: $flower-white;
+        fill: $flower-white;
     }
 </style>

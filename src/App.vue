@@ -9,7 +9,7 @@ import GalleryMainView from './components/GalleryMainView.vue';
 
 <template>
   <main :class="{mainFlowers: galleryState.position == 1}">
-   <GalleryMainView />
+    <GalleryMainView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
     <GalleryControlsVue />
