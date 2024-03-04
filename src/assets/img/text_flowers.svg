@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="20.445074mm"
+   height="89.221725mm"
+   viewBox="0 0 20.445074 89.221725"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="103.17877"
+       y="43.098064"
+       width="356.27963"
+       height="118.44431"
+       id="rect119" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-7.2765862,-7.0103939)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.26458333,-0.26458333,0,43.46655,-20.965723)"
+       id="text117"
+       style="font-size:100px;white-space:pre;shape-inside:url(#rect119);display:inline;fill:#000000"><tspan
+         x="103.17969"
+         y="135.6446"
+         id="tspan298"><tspan
+           style="font-family:Inter;-inkscape-font-specification:Inter;fill:#e4e4e4"
+           id="tspan296">flowers</tspan></tspan></text>
+  </g>
+</svg>

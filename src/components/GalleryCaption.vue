@@ -12,12 +12,6 @@ import { galleryState } from '@/galleryState';
                 <div class="light"></div>
             </div>
             <aside v-else-if="galleryState.position == 1">
-                <svg view-box="0 0 100 100">
-                    <text
-                    x="0" y="0"
-                    class="flowers">flowers
-                    </text>
-                </svg>
             </aside>
         </Transition>
     </section>
@@ -77,18 +71,11 @@ import { galleryState } from '@/galleryState';
         flex-direction: column;
         width: 100%;
         height: 100%;
+        background-image: url('../assets/img/text_flowers.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
-    svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    svg text {
-        transform: rotate(90deg);
-        font-family: 'Inter';
-        font-size: calc(5vw + 5vh);
-    }
 
     .flowers {
         border-color: $flower-green;
