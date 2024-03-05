@@ -10,7 +10,9 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" >
                 </span>
-                <p v-else-if="galleryState.position == 1">flowers flowers flowers</p>
+                <ul v-else-if="galleryState.position == 1">
+                    <li>computing as </li>
+                </ul>
             </Transition>
         </section>
 </template>
