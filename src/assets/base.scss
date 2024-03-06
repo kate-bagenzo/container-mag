@@ -23,12 +23,17 @@
   to {opacity: 0%;}
 }
 
+@keyframes fadeIn {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
 @keyframes slideFromWidth {
-  from {width: 0%;}
-  to {width: 100%;}
+  from {width: 100%;}
+  to {width: 0%;}
 }
 
 @keyframes slideFromHeight {
-  from {height: 0%;}
-  to {height: 100%;}
+  from {top: 0;}
+  to {top: -100%;}
 }

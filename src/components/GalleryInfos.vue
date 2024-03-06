@@ -37,8 +37,6 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
         justify-content: center;
         overflow: hidden;
         gap: 0.5rem;
-        animation-name: slideFromHeight;
-        animation-duration: 1s;
         transition: all 2s ease-out;
 
 
