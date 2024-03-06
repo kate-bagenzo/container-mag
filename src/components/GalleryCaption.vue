@@ -100,4 +100,8 @@ import { galleryState } from '@/galleryState';
         color: $flower-white;
         fill: $flower-white;
     }
+
+    @media screen and (orientation: portrait) {
+
+    }
 </style>

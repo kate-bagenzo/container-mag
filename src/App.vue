@@ -6,17 +6,17 @@ import GalleryCaptionVue from './components/GalleryCaption.vue';
 import GalleryMainView from './components/GalleryMainView.vue';
 import { ref } from 'vue';
 
-const container = 'container';
-const aniLetter = ref(container[0]);
+const sentence = 'container';
+const aniLetter = ref(sentence[0]);
 
 function loadAnimation() {
   let i = 0;
   let j = 0;
   
   const aniText = () => {
-    i >= container.length && (i = 0);
+    i >= sentence.length && (i = 0);
     j == 30 && (clearInterval(loadingAni));
-    aniLetter.value = container[i];
+    aniLetter.value = sentence[i];
     i++;
     j++;
     return aniLetter;
@@ -103,15 +103,12 @@ loadAnimation();
   }
 
   @media screen and (orientation: portrait) {
-    #caption {
-      display: none;
-    }
     
     main {
       grid-template-areas: 
       "art art"
       "info info"
-      "controls controls";
+      "controls caption";
 
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 3fr 2fr 1fr;

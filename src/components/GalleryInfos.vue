@@ -9,7 +9,9 @@ import { galleryState } from '@/galleryState';
                 <span v-if="galleryState.position == 0" class="keyboard" >
                 </span>
                 <ul v-else-if="galleryState.position == 1">
-                    <li>computing as </li>
+                    <li>computing as creativity</li>
+                    <li>computing as a sullen thing</li>
+                    <li>computing as a digital garden</li>
                 </ul>
             </Transition>
         </section>
@@ -55,6 +57,13 @@ import { galleryState } from '@/galleryState';
             align-items: center;
             justify-content: center;
         }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
     .flowers {
         border: 2px dashed $flower-green;
