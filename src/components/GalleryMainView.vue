@@ -6,7 +6,9 @@ import { galleryState } from '@/galleryState';
 <template>
     <section id="mainview" :class="{intro: galleryState.position == 0, flowers: galleryState.position == 1}">
       <Transition mode="out-in">
-        <section class="titles" v-if="galleryState.position == 0">
+        <section class="titles" v-if="galleryState.position == 0 && galleryState.displayIntro == false">
+        </section>
+        <section class="titles" v-else-if="galleryState.position == 0 && galleryState.displayIntro == true">
           <h1><em>CONTAINER</em> presents:</h1>
           <h2>[computing in 2024]</h2>
           <h3>gallerie / collection</h3>
@@ -46,6 +48,17 @@ import { galleryState } from '@/galleryState';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  h1 {
+    animation: blurIn 1s;
+  }
+
+  h2 {
+    animation: blurIn 2s;
+  }
+
+  h3 {
+    animation: blurIn 3s;
   }
 
 

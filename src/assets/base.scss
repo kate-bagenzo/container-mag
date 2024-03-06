@@ -42,3 +42,9 @@
   from {top: 0;}
   to {top: -100%;}
 }
+
+@keyframes blurIn {
+	from {
+		filter: blur(1rem);
+	}
+}
