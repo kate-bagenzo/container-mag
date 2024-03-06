@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { galleryState } from '@/galleryState';
 
-const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
-
 </script>
 
 <template>
@@ -44,6 +42,8 @@ const keyboard = 'qwertyuiopasdfghjklzxcvbnm';
             width: 100%;
             height: 100%;
             background-image: url('../assets/img/keyboard.png');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         
         .keys {
