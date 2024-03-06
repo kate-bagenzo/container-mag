@@ -92,6 +92,7 @@ loadAnimation();
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     font-size: 10rem;
     font-family: 'Inter', 'sans-serif';
     background-color: $core-navy;

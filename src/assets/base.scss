@@ -23,6 +23,11 @@
   to {opacity: 0%;}
 }
 
+@keyframes fadeCycle {
+  from {opacity: 100%;}
+  to {opacity: 25%;}
+}
+
 @keyframes fadeIn {
   from {opacity: 0%;}
   to {opacity: 100%;}

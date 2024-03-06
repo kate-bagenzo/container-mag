@@ -6,7 +6,10 @@ import { galleryState } from '@/galleryState';
 <template>
     <section id="caption" :class="{flowers: galleryState.position == 1}">
         <Transition mode="out-in">
-            <div v-if="galleryState.position == 0">
+            <div v-if="galleryState.displayIntro == false">
+                <button class="power" @click="galleryState.activateDisplay">⏻</button>
+            </div>
+            <div v-else-if="galleryState.position == 0 && galleryState.displayIntro == true">
                 <div class="light"></div>
                 <div class="light"></div>
                 <div class="light"></div>
@@ -42,6 +45,20 @@ import { galleryState } from '@/galleryState';
             align-items: center;
             justify-content: flex-start;
             gap: 1rem;
+        }
+    }
+    .power {
+        all: unset;
+        user-select: none;
+        font-size: 10rem;
+        animation-name: fadeCycle;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        &:hover {
+            animation: none;
+            cursor: pointer;
+            color: $core-coral;
         }
     }
     .light {
