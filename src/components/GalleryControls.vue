@@ -4,7 +4,7 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <ol id="controls" :class="{flowers:galleryState.position == 1}">
+    <ol id="controls" :class="{dead: galleryState.displayIntro == false, flowers:galleryState.position == 1}">
         <li>
             <button :class="{second: galleryState.position, intro:galleryState.position == 0, flowers:galleryState.position == 1}"
             :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
@@ -31,7 +31,7 @@ import { galleryState } from '@/galleryState';
         margin: 0;
         padding: 0;
         border: 2px solid white;
-
+        animation: blurIn 2s;
 
         button {
             all: unset;
@@ -93,7 +93,9 @@ import { galleryState } from '@/galleryState';
             }
         }
     }
-
+    .dead {
+        display: none;
+    }
     .flowers {
             background-color: $flower-gray;
             color: $flower-blue;
