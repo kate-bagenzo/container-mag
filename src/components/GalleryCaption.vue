@@ -4,7 +4,10 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <section id="caption" :class="{flowers: galleryState.position == 1}">
+    <section id="caption" :class="{
+        flowers: galleryState.position == 1,
+        angel: galleryState.position == 2
+        }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
                 <button class="power" @click="galleryState.activateDisplay">⏻</button>
@@ -14,8 +17,8 @@ import { galleryState } from '@/galleryState';
                 <div class="light"></div>
                 <div class="light"></div>
             </div>
-            <aside v-else-if="galleryState.position == 1">
-            </aside>
+            <aside v-else-if="galleryState.position == 1" class="img_flowers"></aside>
+            <aside v-else-if="galleryState.position == 2" class="img_angel"></aside>
         </Transition>
     </section>
 </template>
@@ -88,9 +91,9 @@ import { galleryState } from '@/galleryState';
         flex-direction: column;
         width: 100%;
         height: 100%;
-        background-image: url('../assets/img/text_flowers.svg');
         background-repeat: no-repeat;
         background-size: contain;
+        animation: blurIn 1s;
     }
 
 
@@ -99,6 +102,21 @@ import { galleryState } from '@/galleryState';
         background-color: $flower-gray;
         color: $flower-white;
         fill: $flower-white;
+    }
+
+    .angel {
+        border-color: $angel-red;
+        background-color: black;
+        color: $angel-blue;
+        fill: $angel-blue;
+    }
+
+    .img_flowers {
+        background-image: url('../assets/img/text_flowers.svg');
+    }
+
+    .img_angel {
+        background-image: url('../assets/img/text_angel.svg');
     }
 
     @media screen and (orientation: portrait) {

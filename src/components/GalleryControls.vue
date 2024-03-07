@@ -4,15 +4,29 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-    <ol id="controls" :class="{dead: galleryState.displayIntro == false, flowers:galleryState.position == 1}">
+    <ol id="controls" :class="{
+        dead: galleryState.displayIntro == false,
+        flowers: galleryState.position == 1,
+        angel: galleryState.position == 2
+        }">
         <li>
-            <button :class="{second: galleryState.position, intro:galleryState.position == 0, flowers:galleryState.position == 1}"
+            <button :class="{
+            second: galleryState.position,
+            intro:galleryState.position == 0,
+            flowers:galleryState.position == 1,
+            angel:galleryState.position == 2
+            }"
             :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
             &lt;
             </button>
         </li>
         <li>
-            <button :class="{second: galleryState.position, intro:galleryState.position == 0, flowers:galleryState.position == 1}"
+            <button :class="{
+                second: galleryState.position,
+                intro:galleryState.position == 0,
+                flowers:galleryState.position == 1,
+                angel:galleryState.position == 2
+                }"
             @click="galleryState.galleryForward">
             &gt;
             </button>
@@ -93,9 +107,11 @@ import { galleryState } from '@/galleryState';
             }
         }
     }
+
     .dead {
         display: none;
     }
+
     .flowers {
             background-color: $flower-gray;
             color: $flower-blue;
@@ -105,4 +121,14 @@ import { galleryState } from '@/galleryState';
                 background-color: $flower-blue;
             }
         }
+    
+    .angel {
+        background-color: black;
+        color: $angel-blue;
+        border-color: $angel-red;
+        &:hover {
+            color: $angel-blue;
+            background-color: $angel-red;
+        }
+    }
 </style>

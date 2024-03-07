@@ -29,7 +29,7 @@ loadAnimation();
 </script>
 
 <template>
-  <main :class="{mainFlowers: galleryState.position == 1}">
+  <main :class="{mainFlowers: galleryState.position == 1, mainAngel: galleryState.position == 2}">
     <GalleryMainView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
@@ -59,10 +59,13 @@ loadAnimation();
     font-family: 'Inter', 'sans-serif';
     transition: background-color 2s;
   }
-
+  
   .mainFlowers {
     background-color: $core-grey;
-    transition: background-color 2s;
+  }
+
+  .mainAngel {
+    background-color: $angel-dark;
   }
 
   #mainview {

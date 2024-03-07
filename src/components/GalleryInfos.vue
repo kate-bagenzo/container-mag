@@ -4,7 +4,10 @@ import { galleryState } from '@/galleryState';
 </script>
 
 <template>
-        <section id="info" :class="{flowers: galleryState.position}">
+        <section id="info" :class="{
+            flowers: galleryState.position,
+            angel: galleryState.position == 2
+            }">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" >
                 </span>
@@ -12,6 +15,11 @@ import { galleryState } from '@/galleryState';
                     <li>computing as creativity</li>
                     <li>computing as a sullen thing</li>
                     <li>computing as a digital garden</li>
+                </ul>
+                <ul v-else-if="galleryState.position == 2">
+                    <li>computing as meditation</li>
+                    <li>computing as tactically satisfying</li>
+                    <li>computing as glass shards</li>
                 </ul>
             </Transition>
         </section>
@@ -68,8 +76,15 @@ import { galleryState } from '@/galleryState';
     .flowers {
         border: 2px dashed $flower-green;
         background-color: $flower-gray;
-        p {
+        li {
             color: $flower-blue;
+        }
+    }
+    .angel {
+        border: 2px dashed $angel-blue;
+        background-color: black;
+        li {
+            color: $angel-red;
         }
     }
 </style>
