@@ -6,7 +6,8 @@ import { galleryState } from '@/galleryState';
 <template>
     <section id="caption" :class="{
         flowers: galleryState.position == 1,
-        angel: galleryState.position == 2
+        angel: galleryState.position == 2,
+        stretch: galleryState.position == 3
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
@@ -19,6 +20,7 @@ import { galleryState } from '@/galleryState';
             </div>
             <aside v-else-if="galleryState.position == 1" class="img_flowers"></aside>
             <aside v-else-if="galleryState.position == 2" class="img_angel"></aside>
+            <aside v-else-if="galleryState.position == 3" class="img_stretch"></aside>
         </Transition>
     </section>
 </template>
@@ -111,12 +113,21 @@ import { galleryState } from '@/galleryState';
         fill: $angel-blue;
     }
 
+    .stretch {
+        border-color: $stretch-highlight;
+        background-color: $stretch-fg;
+    }
+
     .img_flowers {
         background-image: url('../assets/img/text_flowers.svg');
     }
 
     .img_angel {
         background-image: url('../assets/img/text_angel.svg');
+    }
+
+    .img_stretch {
+        background-image: url('../assets/img/text_stretch.svg');
     }
 
     @media screen and (orientation: portrait) {

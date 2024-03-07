@@ -7,14 +7,16 @@ import { galleryState } from '@/galleryState';
     <ol id="controls" :class="{
         dead: galleryState.displayIntro == false,
         flowers: galleryState.position == 1,
-        angel: galleryState.position == 2
+        angel: galleryState.position == 2,
+        stretch: galleryState.position == 3
         }">
         <li>
             <button :class="{
             second: galleryState.position,
             intro:galleryState.position == 0,
             flowers:galleryState.position == 1,
-            angel:galleryState.position == 2
+            angel:galleryState.position == 2,
+            stretch: galleryState.position == 3
             }"
             :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
             &lt;
@@ -25,7 +27,8 @@ import { galleryState } from '@/galleryState';
                 second: galleryState.position,
                 intro:galleryState.position == 0,
                 flowers:galleryState.position == 1,
-                angel:galleryState.position == 2
+                angel:galleryState.position == 2,
+                stretch: galleryState.position == 3
                 }"
             @click="galleryState.galleryForward">
             &gt;
@@ -129,6 +132,16 @@ import { galleryState } from '@/galleryState';
         &:hover {
             color: $angel-blue;
             background-color: $angel-red;
+        }
+    }
+
+    .stretch {
+        background-color: $stretch-fg;
+        color: $stretch-highlight;
+        border-color: $stretch-highlight;
+        &:hover {
+            color: $stretch-highlight;
+            background-color: $stretch-bg;
         }
     }
 </style>

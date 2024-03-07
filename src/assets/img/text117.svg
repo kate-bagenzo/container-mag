@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="20.372915mm"
+   height="82.6558mm"
+   viewBox="0 0 20.372915 82.655799"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="text_flowers.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1853"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <rect
+       x="103.17877"
+       y="43.098064"
+       width="356.27963"
+       height="118.44431"
+       id="rect119" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-6.8291437,-10.529445)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.26458333,-0.26458333,0,42.570429,-18.119555)"
+       id="text117"
+       style="font-size:100px;white-space:pre;shape-inside:url(#rect119);display:inline;fill:#000000"><tspan
+         x="103.17969"
+         y="134.08517"
+         id="tspan4061"><tspan
+           style="fill:#ffff00"
+           id="tspan4059">stretch</tspan></tspan></text>
+  </g>
+</svg>

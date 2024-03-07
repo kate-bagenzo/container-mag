@@ -29,7 +29,11 @@ loadAnimation();
 </script>
 
 <template>
-  <main :class="{mainFlowers: galleryState.position == 1, mainAngel: galleryState.position == 2}">
+  <main :class="{
+    mainFlowers: galleryState.position == 1,
+    mainAngel: galleryState.position == 2,
+    mainStretch: galleryState.position == 3
+    }">
     <GalleryMainView />
     <GalleryCaptionVue />
     <GalleryInfosVue />
@@ -66,6 +70,10 @@ loadAnimation();
 
   .mainAngel {
     background-color: $angel-dark;
+  }
+
+  .mainStretch {
+    background-color: $stretch-bg;
   }
 
   #mainview {
