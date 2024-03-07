@@ -5,18 +5,19 @@ import { galleryState } from '@/galleryState';
 
 <template>
         <section id="info" :class="{
-            flowers: galleryState.position,
+            flowers: galleryState.position == 1,
             angel: galleryState.position == 2
             }">
             <Transition mode="out-in">
-                <span v-if="galleryState.position == 0" class="keyboard" >
-                </span>
-                <ul v-else-if="galleryState.position == 1">
+                <span v-if="galleryState.position == 0" class="keyboard" ></span>
+
+                <ul v-else-if="galleryState.position == 1" class="txt_flowers">
                     <li>computing as creativity</li>
                     <li>computing as a sullen thing</li>
                     <li>computing as a digital garden</li>
                 </ul>
-                <ul v-else-if="galleryState.position == 2">
+
+                <ul v-else-if="galleryState.position == 2" class="txt_angel">
                     <li>computing as meditation</li>
                     <li>computing as tactically satisfying</li>
                     <li>computing as glass shards</li>
@@ -45,7 +46,6 @@ import { galleryState } from '@/galleryState';
         justify-content: center;
         overflow: hidden;
         gap: 0.5rem;
-        transition: all 2s ease-out;
 
 
         .keyboard {
@@ -73,18 +73,20 @@ import { galleryState } from '@/galleryState';
         justify-content: center;
         gap: 1rem;
     }
+
     .flowers {
         border: 2px dashed $flower-green;
         background-color: $flower-gray;
-        li {
-            color: $flower-blue;
-        }
     }
+    .txt_flowers {
+        color: $flower-blue;
+    }
+
     .angel {
         border: 2px dashed $angel-blue;
         background-color: black;
-        li {
-            color: $angel-red;
-        }
+    }
+    .txt_angel {
+        color: $angel_red;
     }
 </style>
