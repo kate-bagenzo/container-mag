@@ -14,16 +14,17 @@ import { galleryState } from '@/galleryState';
         }">
         <li>
             <button :class="{
-            second: galleryState.position,
-            intro:galleryState.position == 0,
-            flowers:galleryState.position == 1,
-            angel:galleryState.position == 2,
-            stretch: galleryState.position == 3,
-            user: galleryState.position == 4,
-            hill: galleryState.position == 5
-            }"
-            :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
-            &lt;
+                second: galleryState.position,
+                intro:galleryState.position == 0,
+                flowers:galleryState.position == 1,
+                angel:galleryState.position == 2,
+                stretch: galleryState.position == 3,
+                user: galleryState.position == 4,
+                hill: galleryState.position == 5
+                }"
+                :disabled="galleryState.position == 0"
+                @click="galleryState.galleryBack">
+                &lt;
             </button>
         </li>
         <li>
@@ -36,8 +37,9 @@ import { galleryState } from '@/galleryState';
                 user: galleryState.position == 4,
                 hill: galleryState.position == 5
                 }"
-            @click="galleryState.galleryForward">
-            &gt;
+                :disabled="galleryState.position >= 7"
+                @click="galleryState.galleryForward">
+                &gt;
             </button>
         </li>
     </ol>
