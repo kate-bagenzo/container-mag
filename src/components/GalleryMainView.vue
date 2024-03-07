@@ -5,7 +5,8 @@ import { galleryState } from '@/galleryState';
 
 <template>
     <section id="mainview" :class="{
-      intro: galleryState.position == 0
+      intro: galleryState.position == 0,
+      flowers: galleryState.position == 1,
       }">
       <Transition mode="out-in">
         <section class="titles" v-if="galleryState.position == 0 && galleryState.displayIntro == false">
@@ -73,6 +74,11 @@ import { galleryState } from '@/galleryState';
 
   h3 {
     animation: blurIn 3s;
+  }
+
+  .flowers {
+    border: 2px solid $core-grey;
+    transition: all 2s;
   }
 
   .piece {
