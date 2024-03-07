@@ -153,6 +153,27 @@ import { galleryState } from '@/galleryState';
     }
 
     @media screen and (orientation: portrait) {
+        aside {
+            background-position: bottom;
+        }
+    .img_flowers {
+        background-image: url('../assets/img/text_flowers_portrait.svg');
+    }
 
+    .img_angel {
+        background-image: url('../assets/img/text_angel_portrait.svg');
+    }
+
+    .img_stretch {
+        background-image: url('../assets/img/text_stretch_portrait.svg');
+    }
+
+    .img_user {
+        background-image: url('../assets/img/text_user_portrait.svg');
+    }
+
+    .img_hill {
+        background-image: url('../assets/img/text_hill_portrait.svg');
+    }
     }
 </style>
