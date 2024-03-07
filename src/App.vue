@@ -32,7 +32,8 @@ loadAnimation();
   <main :class="{
     mainFlowers: galleryState.position == 1,
     mainAngel: galleryState.position == 2,
-    mainStretch: galleryState.position == 3
+    mainStretch: galleryState.position == 3,
+    mainUser: galleryState.position == 4
     }">
     <GalleryMainView />
     <GalleryCaptionVue />
@@ -74,6 +75,10 @@ loadAnimation();
 
   .mainStretch {
     background-color: $stretch-bg;
+  }
+
+  .mainUser {
+    background-color: black;
   }
 
   #mainview {

@@ -8,7 +8,8 @@ import { galleryState } from '@/galleryState';
       intro: galleryState.position == 0,
       flowers: galleryState.position == 1,
       angel: galleryState.position == 2,
-      stretch: galleryState.position == 3
+      stretch: galleryState.position == 3,
+      user: galleryState.position == 4
       }">
       <Transition mode="out-in">
         <section class="titles" v-if="galleryState.position == 0 && galleryState.displayIntro == false">
@@ -21,6 +22,7 @@ import { galleryState } from '@/galleryState';
         <section class="piece img_flowers" v-else-if="galleryState.position == 1"></section>
         <section class="piece img_angel" v-else-if="galleryState.position == 2"></section>
         <section class="piece img_stretch" v-else-if="galleryState.position == 3"></section>
+        <section class="piece img_user" v-else-if="galleryState.position == 4"></section>
       </Transition>
     </section>
 </template>
@@ -101,6 +103,10 @@ import { galleryState } from '@/galleryState';
     border: 2px solid $stretch-highlight;
   }
 
+  .user {
+    border: 2px solid white;
+  }
+
 
   .img_flowers {
     background-image: url('../assets/img/flowers.png');
@@ -114,5 +120,10 @@ import { galleryState } from '@/galleryState';
   .img_stretch {
     background-color: $stretch-highlight;
     background-image: url('../assets/img/stretch.png');
+  }
+
+  .img_user {
+    background-color: black;
+    background-image: url('../assets/img/user.png');
   }
 </style>

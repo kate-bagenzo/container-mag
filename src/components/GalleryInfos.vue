@@ -7,7 +7,8 @@ import { galleryState } from '@/galleryState';
         <section id="info" :class="{
             flowers: galleryState.position == 1,
             angel: galleryState.position == 2,
-            stretch: galleryState.position == 3
+            stretch: galleryState.position == 3,
+            user: galleryState.position == 4
             }">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" ></span>
@@ -28,6 +29,12 @@ import { galleryState } from '@/galleryState';
                     <li>computing as bad ergonomics</li>
                     <li>computing as repetitive motion, back pain</li>
                     <li>a keyboard is a filthy, cronenbergian object, packed with the remnants of your dried flesh</li>
+                </ul>
+
+                <ul v-else-if="galleryState.position == 4" class="txt_user">
+                    <li>computing as a silent action</li>
+                    <li>computing as long, joyless hours into the night</li>
+                    <li>a screen is a tool to dry out the aqueous humor</li>
                 </ul>
             </Transition>
         </section>
@@ -103,5 +110,13 @@ import { galleryState } from '@/galleryState';
     }
     .txt_stretch {
         color: $stretch_highlight;
+    }
+
+    .user {
+        border: 2px dashed white;
+        background-color: black;
+    }
+    .txt_user {
+        color: white;
     }
 </style>

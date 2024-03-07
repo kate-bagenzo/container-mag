@@ -8,7 +8,8 @@ import { galleryState } from '@/galleryState';
         dead: galleryState.displayIntro == false,
         flowers: galleryState.position == 1,
         angel: galleryState.position == 2,
-        stretch: galleryState.position == 3
+        stretch: galleryState.position == 3,
+        user: galleryState.position == 4
         }">
         <li>
             <button :class="{
@@ -16,7 +17,8 @@ import { galleryState } from '@/galleryState';
             intro:galleryState.position == 0,
             flowers:galleryState.position == 1,
             angel:galleryState.position == 2,
-            stretch: galleryState.position == 3
+            stretch: galleryState.position == 3,
+            user: galleryState.position == 4
             }"
             :disabled="galleryState.position == 0"  @click="galleryState.galleryBack">
             &lt;
@@ -28,7 +30,8 @@ import { galleryState } from '@/galleryState';
                 intro:galleryState.position == 0,
                 flowers:galleryState.position == 1,
                 angel:galleryState.position == 2,
-                stretch: galleryState.position == 3
+                stretch: galleryState.position == 3,
+                user: galleryState.position == 4
                 }"
             @click="galleryState.galleryForward">
             &gt;
@@ -142,6 +145,16 @@ import { galleryState } from '@/galleryState';
         &:hover {
             color: $stretch-highlight;
             background-color: $stretch-bg;
+        }
+    }
+
+    .user {
+        background-color: black;
+        color: white;
+        border-color: white;
+        &:hover {
+            color: white;
+            background-color: $user-blue;
         }
     }
 </style>
