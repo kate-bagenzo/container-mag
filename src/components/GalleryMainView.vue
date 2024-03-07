@@ -5,12 +5,7 @@ import { galleryState } from '@/galleryState';
 
 <template>
     <section id="mainview" :class="{
-      intro: galleryState.position == 0,
-      flowers: galleryState.position == 1,
-      angel: galleryState.position == 2,
-      stretch: galleryState.position == 3,
-      user: galleryState.position == 4,
-      hill: galleryState.position == 5
+      intro: galleryState.position == 0
       }">
       <Transition mode="out-in">
         <section class="titles" v-if="galleryState.position == 0 && galleryState.displayIntro == false">
@@ -89,52 +84,23 @@ import { galleryState } from '@/galleryState';
   }
 
 
-  .flowers {
-    border: 2px solid $flower-green;
-    outline-offset: 0rem;
-    outline: 1rem solid transparent;
-
-  }
-
-  .angel {
-    border: 2px solid $angel-red;
-    outline: none;
-  }
-
-  .stretch {
-    border: 2px solid $stretch-highlight;
-  }
-
-  .user {
-    border: 2px solid white;
-  }
-
-  .hill {
-    border: 2px solid $hill-fg;
-  }
-
-
   .img_flowers {
     background-image: url('../assets/img/flowers.png');
   }
 
   .img_angel {
-    background-color: black;
     background-image: url('../assets/img/angel.png');
   }
 
   .img_stretch {
-    background-color: $stretch-highlight;
     background-image: url('../assets/img/stretch.png');
   }
 
   .img_user {
-    background-color: black;
     background-image: url('../assets/img/user.png');
   }
 
   .img_hill {
-    background-color: $hill-bg;
     background-image: url('../assets/img/hill.png');
   }
 </style>

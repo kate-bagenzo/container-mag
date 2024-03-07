@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="14.957978mm"
-   height="51.826748mm"
-   viewBox="0 0 14.957978 51.826748"
+   width="14.957979mm"
+   height="51.826752mm"
+   viewBox="0 0 14.957979 51.826752"
    version="1.1"
    id="svg5"
-   sodipodi:docname="text_flowers.svg"
+   sodipodi:docname="text_user.svg"
    inkscape:export-filename="text_user.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -37,10 +37,10 @@
   </defs>
   <g
      id="layer1"
-     transform="translate(-6.427953,-27.071036)">
+     transform="translate(-6.050783,-27.071037)">
     <text
        xml:space="preserve"
-       transform="matrix(0,0.26458333,-0.26458333,0,42.617917,-2.2580625)"
+       transform="matrix(0,0.26458333,-0.26458333,0,42.240747,-2.2580625)"
        id="text117"
        style="font-size:100px;white-space:pre;shape-inside:url(#rect119);display:inline;fill:#000000"
        inkscape:export-filename="text_stretch.svg"
@@ -48,8 +48,8 @@
        inkscape:export-ydpi="96"><tspan
          x="103.17969"
          y="135.6446"
-         id="tspan4504"><tspan
+         id="tspan9331"><tspan
            style="font-family:Inter;-inkscape-font-specification:Inter;fill:#ffffff"
-           id="tspan4502">user</tspan></tspan></text>
+           id="tspan9329">user</tspan></tspan></text>
   </g>
 </svg>
