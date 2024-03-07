@@ -7,5 +7,4 @@ TODO:
 - image zoom
 - investigate wtf is going on with power icon on mobile
     + power variable size for mobile
-- sideways titles for mob
-    + accessibility on titles
++ accessibility on titles
