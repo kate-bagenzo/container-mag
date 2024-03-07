@@ -8,33 +8,45 @@ import { galleryState } from '@/galleryState';
             flowers: galleryState.position == 1,
             angel: galleryState.position == 2,
             stretch: galleryState.position == 3,
-            user: galleryState.position == 4
+            user: galleryState.position == 4,
+            hill: galleryState.position == 5
             }">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" ></span>
 
                 <ul v-else-if="galleryState.position == 1" class="txt_flowers">
                     <li>computing as creativity</li>
-                    <li>computing as a sullen thing</li>
                     <li>computing as a digital garden</li>
+                    <li>code stashed away, endless notes and ideas</li>
+                    <li>a directory is a fenced off place</li>
                 </ul>
 
                 <ul v-else-if="galleryState.position == 2" class="txt_angel">
                     <li>computing as meditation</li>
                     <li>computing as tactically satisfying</li>
-                    <li>computing as glass shards</li>
+                    <li>flow, creativity, glass shards</li>
+                    <li>a mouse is a brush</li>
                 </ul>
 
                 <ul v-else-if="galleryState.position == 3" class="txt_stretch">
                     <li>computing as bad ergonomics</li>
                     <li>computing as repetitive motion, back pain</li>
-                    <li>a keyboard is a filthy, cronenbergian object, packed with the remnants of your dried flesh</li>
+                    <li>a snap of the nerves, dead skin, dirty screens</li>
+                    <li>a keyboard is a biological-machine interface</li>
                 </ul>
 
                 <ul v-else-if="galleryState.position == 4" class="txt_user">
                     <li>computing as a silent action</li>
                     <li>computing as long, joyless hours into the night</li>
+                    <li>whirrs, clicks, yawns</li>
                     <li>a screen is a tool to dry out the aqueous humor</li>
+                </ul>
+
+                <ul v-else-if="galleryState.position == 5" class="txt_hill">
+                    <li>computing as a day trip</li>
+                    <li>computing as a path to a new destination</li>
+                    <li>libraries, parks, friend's houses, cafes</li>
+                    <li>a laptop bag is an excuse for a brief adventure</li>
                 </ul>
             </Transition>
         </section>
@@ -118,5 +130,13 @@ import { galleryState } from '@/galleryState';
     }
     .txt_user {
         color: white;
+    }
+
+    .hill {
+        border: 2px dashed $hill-fg;
+        background-color: $hill-bg;
+    }
+    .txt_hill {
+        color: $hill-fg;
     }
 </style>

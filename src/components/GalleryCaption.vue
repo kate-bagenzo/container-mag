@@ -8,7 +8,8 @@ import { galleryState } from '@/galleryState';
         flowers: galleryState.position == 1,
         angel: galleryState.position == 2,
         stretch: galleryState.position == 3,
-        user: galleryState.position == 4
+        user: galleryState.position == 4,
+        hill: galleryState.position == 5
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
@@ -23,6 +24,7 @@ import { galleryState } from '@/galleryState';
             <aside v-else-if="galleryState.position == 2" class="img_angel"></aside>
             <aside v-else-if="galleryState.position == 3" class="img_stretch"></aside>
             <aside v-else-if="galleryState.position == 4" class="img_user"></aside>
+            <aside v-else-if="galleryState.position == 5" class="img_hill"></aside>
         </Transition>
     </section>
 </template>
@@ -125,6 +127,11 @@ import { galleryState } from '@/galleryState';
         background-color: black;
     }
 
+    .hill {
+        border-color: $hill-fg;
+        background-color: $hill-bg;
+    }
+
     .img_flowers {
         background-image: url('../assets/img/text_flowers.svg');
     }
@@ -139,6 +146,10 @@ import { galleryState } from '@/galleryState';
 
     .img_user {
         background-image: url('../assets/img/text_user.svg');
+    }
+
+    .img_hill {
+        background-image: url('../assets/img/text_hill.svg');
     }
 
     @media screen and (orientation: portrait) {
