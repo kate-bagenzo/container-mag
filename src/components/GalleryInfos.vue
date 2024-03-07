@@ -103,6 +103,7 @@ import { galleryState } from '@/galleryState';
     .flowers {
         border: 2px dashed $flower-green;
         background-color: $flower-gray;
+        transition: all 2s;
     }
     .txt_flowers {
         color: $flower-blue;
@@ -111,6 +112,7 @@ import { galleryState } from '@/galleryState';
     .angel {
         border: 2px dashed $angel-blue;
         background-color: black;
+        transition: all 2s;
     }
     .txt_angel {
         color: $angel_red;
@@ -119,6 +121,7 @@ import { galleryState } from '@/galleryState';
     .stretch {
         border: 2px dashed $stretch-highlight;
         background-color: $stretch-fg;
+        transition: all 2s;
     }
     .txt_stretch {
         color: $stretch_highlight;
@@ -127,6 +130,7 @@ import { galleryState } from '@/galleryState';
     .user {
         border: 2px dashed white;
         background-color: black;
+        transition: all 2s;
     }
     .txt_user {
         color: white;
@@ -135,6 +139,7 @@ import { galleryState } from '@/galleryState';
     .hill {
         border: 2px dashed $hill-fg;
         background-color: $hill-bg;
+        transition: all 2s;
     }
     .txt_hill {
         color: $hill-fg;
