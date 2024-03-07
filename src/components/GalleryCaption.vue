@@ -13,7 +13,7 @@ import { galleryState } from '@/galleryState';
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
-                <button class="power" @click="galleryState.activateDisplay">⏻</button>
+                <button aria-label="start gallery" type="button" class="power" @click="galleryState.activateDisplay">⏻</button>
             </div>
             <div v-else-if="galleryState.position == 0 && galleryState.displayIntro == true">
                 <div class="light"></div>

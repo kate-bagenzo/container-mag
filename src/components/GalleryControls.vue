@@ -22,6 +22,7 @@ import { galleryState } from '@/galleryState';
                 user: galleryState.position == 4,
                 hill: galleryState.position == 5
                 }"
+                aria-label="previous piece"
                 :disabled="galleryState.position == 0"
                 @click="galleryState.galleryBack">
                 &lt;
@@ -37,6 +38,7 @@ import { galleryState } from '@/galleryState';
                 user: galleryState.position == 4,
                 hill: galleryState.position == 5
                 }"
+                aria-label="next piece"
                 :disabled="galleryState.position >= 7"
                 @click="galleryState.galleryForward">
                 &gt;
