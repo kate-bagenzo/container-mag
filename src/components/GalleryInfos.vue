@@ -113,7 +113,7 @@ import { galleryState } from '@/galleryState';
         height: 100%;
         overflow: scroll;
         margin: 0rem;
-        padding: 0;
+        padding: 1rem;
         list-style-type: none;
     }
     li {
