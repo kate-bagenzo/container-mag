@@ -66,6 +66,7 @@ import { galleryState } from '@/galleryState';
     width: 100%;
     height: 100%;
     padding: 1rem;
+    user-select: none;
   }
 
   h1 {
@@ -85,7 +86,7 @@ import { galleryState } from '@/galleryState';
   }
 
   .flowers {
-    border: 2px solid $core-grey;
+    border: 2px solid transparent;
     transition: all 2s;
   }
 
@@ -110,6 +111,7 @@ import { galleryState } from '@/galleryState';
     justify-content: center;
     gap: 2rem;
     font-size: 2rem;
+    user-select: none;
 
     a {
       font-size: 2.5rem;
