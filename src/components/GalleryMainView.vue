@@ -24,7 +24,8 @@ import { galleryState } from '@/galleryState';
         <img @click="galleryState.toggleModal" class="piece" alt="a grey dithered desert. the sky is red and cracked like glass, with large cuboid figures in the horizon. in the foreground, large red motherboards jut out from the sides. in the center, a bright red vase." src="../assets/img/culmination.png" v-else-if="galleryState.position == 6"></img>
         <section class="piece end" v-else-if="galleryState.position == 7">
           <p>"computing in 2024"</p>
-          <p>art & gallery by <a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
+          <p>art & gallery by</p>
+          <p><a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
           <p>for container magazine</p>
           <p>~</p>
         </section>
@@ -112,6 +113,7 @@ import { galleryState } from '@/galleryState';
     gap: 2rem;
     font-size: 2rem;
     user-select: none;
+    text-align: center;
 
     a {
       font-size: 2.5rem;
