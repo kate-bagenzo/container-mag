@@ -9,7 +9,8 @@ import { galleryState } from '@/galleryState';
             angel: galleryState.position == 2,
             stretch: galleryState.position == 3,
             user: galleryState.position == 4,
-            hill: galleryState.position == 5
+            hill: galleryState.position == 5,
+            culmination: galleryState.position == 6
             }">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" ></span>
@@ -47,6 +48,14 @@ import { galleryState } from '@/galleryState';
                     <li>computing as a path to a new destination</li>
                     <li>libraries, parks, friend's houses, cafes</li>
                     <li>a laptop bag is an excuse for a brief adventure</li>
+                </ul>
+
+                <ul v-else-if="galleryState.position == 6" class="txt_culmination">
+                    <li>???</li>
+                    <li>the future? or sooner?</li>
+                    <li>frayed wires, leaking capacitors</li>
+                    <li>a solid state drive has a hundred thousand write cycles</li>
+                    <li>a heart, three billion beats</li>
                 </ul>
             </Transition>
         </section>
@@ -143,5 +152,14 @@ import { galleryState } from '@/galleryState';
     }
     .txt_hill {
         color: $hill-fg;
+    }
+
+    .culmination {
+        border: 2px dashed $culmination-fg;
+        background-color: $culmination-bg;
+        transition: all 2s;
+    }
+    .txt_hill {
+        color: $culmination-fg;
     }
 </style>

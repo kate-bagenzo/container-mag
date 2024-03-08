@@ -10,7 +10,8 @@ import { galleryState } from '@/galleryState';
         angel: galleryState.position == 2,
         stretch: galleryState.position == 3,
         user: galleryState.position == 4,
-        hill: galleryState.position == 5
+        hill: galleryState.position == 5,
+        culmination: galleryState.position == 6
         }">
         <li>
             <button :class="{
@@ -20,7 +21,8 @@ import { galleryState } from '@/galleryState';
                 angel:galleryState.position == 2,
                 stretch: galleryState.position == 3,
                 user: galleryState.position == 4,
-                hill: galleryState.position == 5
+                hill: galleryState.position == 5,
+                culmination: galleryState.position == 6
                 }"
                 aria-label="previous piece"
                 :disabled="galleryState.position == 0"
@@ -36,7 +38,8 @@ import { galleryState } from '@/galleryState';
                 angel:galleryState.position == 2,
                 stretch: galleryState.position == 3,
                 user: galleryState.position == 4,
-                hill: galleryState.position == 5
+                hill: galleryState.position == 5,
+                culmination: galleryState.position == 6
                 }"
                 aria-label="next piece"
                 :disabled="galleryState.position >= 7"
@@ -156,11 +159,11 @@ import { galleryState } from '@/galleryState';
     }
 
     .user {
-        background-color: black;
-        color: white;
-        border-color: white;
+        background-color: $user-bg;
+        color: $user-fg;
+        border-color: $user-fg;
         &:hover {
-            color: white;
+            color: $user-fg;
             background-color: $user-blue;
         }
     }
@@ -172,6 +175,16 @@ import { galleryState } from '@/galleryState';
         &:hover {
             color: $hill-fg;
             background-color: $hill-highlight;
+        }
+    }
+
+    .culmination {
+        background-color: $culmination-bg;
+        color: $culmination-fg;
+        border-color: $culmination-fg;
+        &:hover {
+            color: $culmination-highlight;
+            background-color: $culmination-bg;
         }
     }
 </style>

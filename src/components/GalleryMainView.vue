@@ -21,6 +21,8 @@ import { galleryState } from '@/galleryState';
         <img class="piece" alt="hands made of ground beef type on a keyboard etched into a curved spine. yellow spikes radiate from the spine." src="../assets/img/stretch.png" v-else-if="galleryState.position == 3"></img>
         <img class="piece" alt="a statue stares at a laptop. in the background: a collage of pipes, motherboard parts, and a glowing eye." src="../assets/img/user.png" v-else-if="galleryState.position == 4"></img>
         <img class="piece" alt="two hands twisted to look like walking figures ascend a thumbprint-shaped hill. at the top of the hill is a room with a computer and a potted plant. there is a large flower growing from the hill and the sun shines brightly." src="../assets/img/hill.png" v-else-if="galleryState.position == 5"></img>
+        <img class="piece" alt="" src="../assets/img/culmination.png" v-else-if="galleryState.position == 6"></img>
+
       </Transition>
     </section>
 </template>

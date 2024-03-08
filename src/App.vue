@@ -34,7 +34,8 @@ loadAnimation();
     mainAngel: galleryState.position == 2,
     mainStretch: galleryState.position == 3,
     mainUser: galleryState.position == 4,
-    mainHill: galleryState.position == 5
+    mainHill: galleryState.position == 5,
+    mainCulmination: galleryState.position == 6
     }">
     <GalleryMainView />
     <GalleryCaptionVue />
@@ -79,11 +80,15 @@ loadAnimation();
   }
 
   .mainUser {
-    background-color: black;
+    background-color: $user-bg;
   }
 
   .mainHill {
     background-color: $hill-bg;
+  }
+
+  .mainCulmination {
+    background-color: $culmination-bg;
   }
 
   #mainview {

@@ -9,7 +9,8 @@ import { galleryState } from '@/galleryState';
         angel: galleryState.position == 2,
         stretch: galleryState.position == 3,
         user: galleryState.position == 4,
-        hill: galleryState.position == 5
+        hill: galleryState.position == 5,
+        culmination: galleryState.position == 6
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
@@ -25,6 +26,7 @@ import { galleryState } from '@/galleryState';
             <aside v-else-if="galleryState.position == 3" class="img_stretch"></aside>
             <aside v-else-if="galleryState.position == 4" class="img_user"></aside>
             <aside v-else-if="galleryState.position == 5" class="img_hill"></aside>
+            <aside v-else-if="galleryState.position == 6" class="img_culmination"></aside>
         </Transition>
     </section>
 </template>
@@ -130,6 +132,11 @@ import { galleryState } from '@/galleryState';
     .hill {
         border-color: $hill-fg;
         background-color: $hill-bg;
+    }
+
+    .culmination {
+        border-color: $culmination-fg;
+        background-color: $culmination-bg;
     }
 
     .img_flowers {
