@@ -4,6 +4,7 @@ import GalleryControlsVue from './components/GalleryControls.vue';
 import GalleryInfosVue from './components/GalleryInfos.vue';
 import GalleryCaptionVue from './components/GalleryCaption.vue';
 import GalleryMainView from './components/GalleryMainView.vue';
+import GalleryZoom from './components/GalleryZoom.vue';
 import { ref } from 'vue';
 
 const sentence = 'container';
@@ -42,6 +43,7 @@ loadAnimation();
     <GalleryCaptionVue />
     <GalleryInfosVue />
     <GalleryControlsVue />
+    <GalleryZoom />
   </main>
   <aside>
     [ {{ aniLetter }} ]

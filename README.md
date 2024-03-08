@@ -5,3 +5,5 @@ download npm run dev or check out the live deploy
 
 TODO:
 - image zoom
+
+FIX UL PADDING

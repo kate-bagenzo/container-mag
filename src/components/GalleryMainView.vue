@@ -16,12 +16,12 @@ import { galleryState } from '@/galleryState';
           <h2>[computing in 2024]</h2>
           <h3>gallerie / collection</h3>
         </section>
-        <img class="piece" alt="a laptop set against pixellated code and a tree with small white flowers. a hand holds similar flowers next to the laptop." src="../assets/img/flowers.png" v-else-if="galleryState.position == 1"></img>
-        <img class="piece" alt="a laptop is suspended in the sky by stained glass. a cherubic hand descends from the heavens, about to touch the laptop." src="../assets/img/angel.png" v-else-if="galleryState.position == 2"></img>
-        <img class="piece" alt="hands made of ground beef type on a keyboard etched into a curved spine. yellow spikes radiate from the spine." src="../assets/img/stretch.png" v-else-if="galleryState.position == 3"></img>
-        <img class="piece" alt="a statue stares at a laptop. in the background: a collage of pipes, motherboard parts, and a glowing eye." src="../assets/img/user.png" v-else-if="galleryState.position == 4"></img>
-        <img class="piece" alt="two hands twisted to look like walking figures ascend a thumbprint-shaped hill. at the top of the hill is a room with a computer and a potted plant. there is a large flower growing from the hill and the sun shines brightly." src="../assets/img/hill.png" v-else-if="galleryState.position == 5"></img>
-        <img class="piece" alt="" src="../assets/img/culmination.png" v-else-if="galleryState.position == 6"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="a laptop set against pixellated code and a tree with small white flowers. a hand holds similar flowers next to the laptop." src="../assets/img/flowers.png" v-else-if="galleryState.position == 1"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="a laptop is suspended in the sky by stained glass. a cherubic hand descends from the heavens, about to touch the laptop." src="../assets/img/angel.png" v-else-if="galleryState.position == 2"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="hands made of ground beef type on a keyboard etched into a curved spine. yellow spikes radiate from the spine." src="../assets/img/stretch.png" v-else-if="galleryState.position == 3"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="a statue stares at a laptop. in the background: a collage of pipes, motherboard parts, and a glowing eye." src="../assets/img/user.png" v-else-if="galleryState.position == 4"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="two hands twisted to look like walking figures ascend a thumbprint-shaped hill. at the top of the hill is a room with a computer and a potted plant. there is a large flower growing from the hill and the sun shines brightly." src="../assets/img/hill.png" v-else-if="galleryState.position == 5"></img>
+        <img @click="galleryState.toggleModal" class="piece" alt="a grey dithered desert. the sky is red and cracked like glass, with large cuboid figures in the horizon. in the foreground, large red motherboards jut out from the sides. in the center, a bright red vase." src="../assets/img/culmination.png" v-else-if="galleryState.position == 6"></img>
         <section class="piece end" v-else-if="galleryState.position == 7">
           <p>"computing in 2024"</p>
           <p>art & gallery by <a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
@@ -97,6 +97,7 @@ import { galleryState } from '@/galleryState';
 
   img {
     max-width: 100%;
+    cursor: pointer;
   }
 
   .end {
