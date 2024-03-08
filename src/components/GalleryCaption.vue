@@ -147,7 +147,8 @@ import { galleryState } from '@/galleryState';
     }
 
     .credits {
-        display: none;
+        border-color: $credits-bg;
+        background-color: $credits-bg;
     }
 
     .img_flowers {

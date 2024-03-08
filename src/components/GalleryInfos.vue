@@ -176,6 +176,8 @@ import { galleryState } from '@/galleryState';
     }
 
     .credits {
-        display: none;
+        border: 2px dashed $credits-bg;
+        background-color: $culmination-bg;
+        transition: all 2s;
     }
 </style>

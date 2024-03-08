@@ -27,7 +27,6 @@ import { galleryState } from '@/galleryState';
           <p>art & gallery by</p>
           <p><a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
           <p>for container magazine</p>
-          <p>~</p>
         </section>
 
       </Transition>
