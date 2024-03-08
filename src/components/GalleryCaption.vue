@@ -15,7 +15,7 @@ import { galleryState } from '@/galleryState';
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
-                <button aria-label="start gallery" type="button" class="power" @click="galleryState.activateDisplay">⏻</button>
+                <button aria-label="start gallery" type="button" class="power" @click="galleryState.activateDisplay"></button>
             </div>
             <div v-else-if="galleryState.position == 0 && galleryState.displayIntro == true">
                 <div class="light"></div>
@@ -62,11 +62,17 @@ import { galleryState } from '@/galleryState';
     .power {
         all: unset;
         user-select: none;
-        font-size: 10rem;
+        font-size: 5rem;
         animation-name: fadeCycle;
         animation-duration: 1s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+        margin-top: 2rem;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &:hover {
             animation: none;
             cursor: pointer;
