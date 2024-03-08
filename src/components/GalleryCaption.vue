@@ -22,12 +22,12 @@ import { galleryState } from '@/galleryState';
                 <div class="light"></div>
                 <div class="light"></div>
             </div>
-            <aside v-else-if="galleryState.position == 1" class="img_flowers"></aside>
-            <aside v-else-if="galleryState.position == 2" class="img_angel"></aside>
-            <aside v-else-if="galleryState.position == 3" class="img_stretch"></aside>
-            <aside v-else-if="galleryState.position == 4" class="img_user"></aside>
-            <aside v-else-if="galleryState.position == 5" class="img_hill"></aside>
-            <aside v-else-if="galleryState.position == 6" class="img_culmination"></aside>
+            <aside v-else-if="galleryState.position == 1" class="img_flowers"><h1 class="sr-only">flowers</h1></aside>
+            <aside v-else-if="galleryState.position == 2" class="img_angel"><h1 class="sr-only">angel</h1></aside>
+            <aside v-else-if="galleryState.position == 3" class="img_stretch"><h1 class="sr-only">stretch</h1></aside>
+            <aside v-else-if="galleryState.position == 4" class="img_user"><h1 class="sr-only">user</h1></aside>
+            <aside v-else-if="galleryState.position == 5" class="img_hill"><h1 class="sr-only">hill</h1></aside>
+            <aside v-else-if="galleryState.position == 6" class="img_culmination"><h1 class="sr-only">culmination</h1></aside>
         </Transition>
     </section>
 </template>
@@ -167,6 +167,26 @@ import { galleryState } from '@/galleryState';
     .img_culmination {
         background-image: url('../assets/img/text_culmination.svg');
     }
+
+    .sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    }
+    .sr-only.focusable:active,
+    .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    }
+
 
     @media screen and (orientation: portrait) {
         section {

@@ -7,4 +7,4 @@ TODO:
 - image zoom
 + accessibility on titles
 
-- object to path all svg
+-NEW FAVICON
