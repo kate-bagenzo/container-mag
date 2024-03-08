@@ -8,3 +8,5 @@ TODO:
 - investigate wtf is going on with power icon on mobile
     + power variable size for mobile
 + accessibility on titles
+
+- object to path all svg

@@ -59,7 +59,7 @@ loadAnimation();
     "art caption"
     "info controls";
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: minmax(0, 2fr) 1fr;
     gap: 1rem;
 
     background-color: $core-navy;

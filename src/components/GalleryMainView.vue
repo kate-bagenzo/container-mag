@@ -95,6 +95,10 @@ import { galleryState } from '@/galleryState';
     object-fit: contain;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   .end {
     p {
       margin: 0;
