@@ -52,7 +52,6 @@ import { galleryState } from '@/galleryState';
                 </ul>
 
                 <ul v-else-if="galleryState.position == 6" class="txt_culmination">
-                    <li>???</li>
                     <li>the future? or sooner?</li>
                     <li>frayed wires, leaking capacitors</li>
                     <li>a solid state drive has a hundred thousand write cycles</li>
