@@ -159,6 +159,10 @@ import { galleryState } from '@/galleryState';
         background-image: url('../assets/img/text_hill.svg');
     }
 
+    .img_culmination {
+        background-image: url('../assets/img/text_culmination.svg');
+    }
+
     @media screen and (orientation: portrait) {
         aside {
             background-position: bottom;
@@ -181,6 +185,10 @@ import { galleryState } from '@/galleryState';
 
     .img_hill {
         background-image: url('../assets/img/text_hill_portrait.svg');
+    }
+
+    .img_culmination {
+        background-image: url('../assets/img/text_culmination_portrait.svg');
     }
     }
 </style>
