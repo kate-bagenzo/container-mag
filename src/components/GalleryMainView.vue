@@ -22,6 +22,12 @@ import { galleryState } from '@/galleryState';
         <img class="piece" alt="a statue stares at a laptop. in the background: a collage of pipes, motherboard parts, and a glowing eye." src="../assets/img/user.png" v-else-if="galleryState.position == 4"></img>
         <img class="piece" alt="two hands twisted to look like walking figures ascend a thumbprint-shaped hill. at the top of the hill is a room with a computer and a potted plant. there is a large flower growing from the hill and the sun shines brightly." src="../assets/img/hill.png" v-else-if="galleryState.position == 5"></img>
         <img class="piece" alt="" src="../assets/img/culmination.png" v-else-if="galleryState.position == 6"></img>
+        <section class="piece end" v-else-if="galleryState.position == 7">
+          <p>"computing in 2024"</p>
+          <p>art & gallery by <a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
+          <p>for container magazine</p>
+          <p>~</p>
+        </section>
 
       </Transition>
     </section>
@@ -87,5 +93,28 @@ import { galleryState } from '@/galleryState';
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .end {
+    p {
+      margin: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+
+    a {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $credits-fg;
+      text-decoration: none;
+      text-shadow: 0.2rem 0.2rem $credits-primary;
+      &:hover {
+        text-shadow: 0.2rem 0.2rem $credits-faded;
+      }
+    }
   }
 </style>

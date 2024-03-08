@@ -11,7 +11,8 @@ import { galleryState } from '@/galleryState';
         stretch: galleryState.position == 3,
         user: galleryState.position == 4,
         hill: galleryState.position == 5,
-        culmination: galleryState.position == 6
+        culmination: galleryState.position == 6,
+        credits: galleryState.position == 7
         }">
         <li>
             <button :class="{
@@ -22,7 +23,8 @@ import { galleryState } from '@/galleryState';
                 stretch: galleryState.position == 3,
                 user: galleryState.position == 4,
                 hill: galleryState.position == 5,
-                culmination: galleryState.position == 6
+                culmination: galleryState.position == 6,
+                credits: galleryState.position == 7
                 }"
                 aria-label="previous piece"
                 :disabled="galleryState.position == 0"
@@ -39,7 +41,8 @@ import { galleryState } from '@/galleryState';
                 stretch: galleryState.position == 3,
                 user: galleryState.position == 4,
                 hill: galleryState.position == 5,
-                culmination: galleryState.position == 6
+                culmination: galleryState.position == 6,
+                credits: galleryState.position == 7
                 }"
                 aria-label="next piece"
                 :disabled="galleryState.position >= 7"
@@ -185,6 +188,22 @@ import { galleryState } from '@/galleryState';
         &:hover {
             color: $culmination-highlight;
             background-color: $culmination-bg;
+        }
+    }
+
+    .credits {
+        background-color: $credits-bg;
+        color: $credits-fg;
+        border-color: $credits-fg;
+        &:hover {
+            color: $credits-fg;
+            background-color: $credits-faded;
+        }
+        &:disabled {
+            color: $credits-faded;
+            &:hover {
+                background-color: $credits-bg;
+            }
         }
     }
 </style>

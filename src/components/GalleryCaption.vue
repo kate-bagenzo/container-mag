@@ -10,7 +10,8 @@ import { galleryState } from '@/galleryState';
         stretch: galleryState.position == 3,
         user: galleryState.position == 4,
         hill: galleryState.position == 5,
-        culmination: galleryState.position == 6
+        culmination: galleryState.position == 6,
+        credits: galleryState.position == 7
         }">
         <Transition mode="out-in">
             <div v-if="galleryState.displayIntro == false">
@@ -137,6 +138,10 @@ import { galleryState } from '@/galleryState';
     .culmination {
         border-color: $culmination-fg;
         background-color: $culmination-bg;
+    }
+
+    .credits {
+        display: none;
     }
 
     .img_flowers {

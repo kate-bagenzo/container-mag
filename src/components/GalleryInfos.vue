@@ -10,7 +10,8 @@ import { galleryState } from '@/galleryState';
             stretch: galleryState.position == 3,
             user: galleryState.position == 4,
             hill: galleryState.position == 5,
-            culmination: galleryState.position == 6
+            culmination: galleryState.position == 6,
+            credits: galleryState.position == 7
             }">
             <Transition mode="out-in">
                 <span v-if="galleryState.position == 0" class="keyboard" ></span>
@@ -161,5 +162,9 @@ import { galleryState } from '@/galleryState';
     }
     .txt_hill {
         color: $culmination-fg;
+    }
+
+    .credits {
+        display: none;
     }
 </style>
