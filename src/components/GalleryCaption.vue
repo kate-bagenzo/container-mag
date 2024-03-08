@@ -169,6 +169,9 @@ import { galleryState } from '@/galleryState';
     }
 
     @media screen and (orientation: portrait) {
+        section {
+            min-height: 12rem;
+        }
         aside {
             background-position: bottom;
         }
