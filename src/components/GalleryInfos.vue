@@ -74,6 +74,7 @@ import { galleryState } from '@/galleryState';
 
     section {
         border: 2px dashed $core-coral;
+        padding: 1rem;
 
         display: flex;
         flex-wrap: wrap;
@@ -107,6 +108,16 @@ import { galleryState } from '@/galleryState';
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        margin: 0rem;
+        padding: 0;
+        list-style-type: none;
+    }
+    li {
+        width: 100%;
+        text-align: center;
     }
 
     .flowers {
