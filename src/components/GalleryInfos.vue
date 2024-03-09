@@ -82,7 +82,7 @@ import { galleryState } from '@/galleryState';
         justify-content: center;
         overflow: hidden;
         gap: 0.5rem;
-        min-height: 10rem;
+        min-height: 12rem;
 
 
         .keyboard {
@@ -111,7 +111,6 @@ import { galleryState } from '@/galleryState';
         gap: 1rem;
         width: 100%;
         height: 100%;
-        overflow: scroll;
         margin: 0rem;
         padding: 1rem;
         list-style-type: none;

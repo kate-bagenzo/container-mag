@@ -26,7 +26,7 @@ import { galleryState } from '@/galleryState';
           <p>"computing in 2024"</p>
           <p>art & gallery by</p>
           <p><a href="https://katebagenzo.neocities.org/" target="_blank">Kate Bagenzo</a></p>
-          <p>for container magazine</p>
+          <p>for container</p>
         </section>
 
       </Transition>
@@ -109,8 +109,8 @@ import { galleryState } from '@/galleryState';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    font-size: 2rem;
+    gap: 1.5rem;
+    font-size: 1.5rem;
     user-select: none;
     text-align: center;
 
@@ -119,9 +119,9 @@ import { galleryState } from '@/galleryState';
       font-weight: bold;
       color: $credits-fg;
       text-decoration: none;
-      text-shadow: 0.2rem 0.2rem $credits-primary;
+      text-shadow: 0.3rem 0.3rem $credits-primary;
       &:hover {
-        text-shadow: 0.2rem 0.2rem $credits-faded;
+        text-shadow: 0.3rem 0.3rem $credits-faded;
       }
     }
   }
