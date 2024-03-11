@@ -70,10 +70,7 @@ import { galleryState } from '@/galleryState';
         margin-top: 2rem;
         writing-mode: vertical-rl;
         text-orientation: sideways;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 5rem;
+        line-height: 8rem;
         &:hover {
             animation: none;
             cursor: pointer;
