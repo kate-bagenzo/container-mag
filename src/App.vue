@@ -131,7 +131,7 @@ loadAnimation();
     background-color: $core-navy;
     color: $core-grey;
     animation-name: slideFromHeight;
-    animation-duration: 10s;
+    animation-duration: 7s;
     border: 2px solid $core-grey;
   }
 

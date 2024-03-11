@@ -73,6 +73,7 @@ import { galleryState } from '@/galleryState';
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: 5rem;
         &:hover {
             animation: none;
             cursor: pointer;
