@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   // ENABLE THIS ONLY IF YOU EXPORT TO A GITHUB DIRECTORY OF THE SAME NAME
-  base: '/container-mag/',
+  //base: '/container-mag/',
   plugins: [
     vue(),
   ],
